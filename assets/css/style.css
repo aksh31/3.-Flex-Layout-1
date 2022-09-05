@@ -77,13 +77,10 @@ a:link, a:visited{
     padding: 20px;
 }
 
-.side-bar{
-    background-color: aqua;
-    padding: 20px;
-}
-
 /* ====================< Movie Post Section >==================== */
-
+.posts {
+    margin-bottom: 40px;
+}
 .movie-post{
     background-color: #fff;
     margin-bottom: 20px;
@@ -93,20 +90,148 @@ a:link, a:visited{
     text-align: center;
     background-color: #f6d200;
 }
+.movie-post:hover .post-info h3{
+    background-color: #000;
+    color: #f6d200;
+}
 .post-info p {
     padding: 20px;
 }
+/* ====================< Watch Today Section >==================== */
+.watch-today{
+    margin-bottom: 40px;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+.watch-card{
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+.card-info {
+    background-color: #000;
+    color :#fff;
+    padding: 50px 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.card-info h3 {
+    margin-bottom: 20px;
+}
+.movie-details span {
+    margin-right: 20px;
+}
+.card-info p {
+    margin-bottom: 40px;
+}
+.card-info a {
+    color: #fff;
+    text-decoration: underline;
+}
 
-
-
-
-
-/* =====================< Main-Content-Area CSS End >==================== */
-
-.footer{
+/* ====================< Download Now Section >==================== */
+.download{
+    margin-bottom: 40px;
+}
+.download-card{
+    display: flex;
+    flex-direction: column;
+}
+.download-icon{
     background-color: #000;
     color: #fff;
     padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+.download-icon a{
+    color: #fff;
+}
+.download-icon i {
+    font-size: 30px;
+}
+
+/* ======================== ======================== */
+.download-gener-cast{
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.download-gener, .download-cast {
+    display: flex;
+    flex-wrap: wrap;
+}
+.download-gener h4, .download-cast h4 {
+    flex-basis: 20%;
+    align-self: center;
+}
+.download-gener {
+    margin-bottom: 10px;
+}
+.download-cast img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* ======================== ======================== */
+.download-ratings{
+    background-color: #f6d200;
+    text-align: center;
+    padding: 20px;
+}
+.download-ratings h4{
+    font-size: 35px;
+}
+.download-ratings p{
+    font-size: 12px;
+}
+
+/* ====================< Movies Gallary Section >==================== */
+
+
+.gallary-post{
+    margin-bottom: 10px;
+}
+
+/* =====================< Main-Content-Area CSS End >==================== */
+
+
+/* =====================< Side-Bar-Area CSS Starts >==================== */
+.side-bar{
+    padding: 20px;
+}
+.card{
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.card h2{
+    margin-bottom: 20px;
+}
+.list-group{
+    list-style: none;
+}
+.list-group li {
+    display: block;
+    margin: 5px 0 5px 30px;
+}
+
+
+/* ====================< Footer Section CSS >==================== */
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
 /* =====================< Media Queries Start >==================== */
@@ -128,6 +253,40 @@ a:link, a:visited{
     .movie-post{
         flex-basis: 49%;
     }
+    .watch-card {
+        flex-direction: row;
+    }
+    .card-info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .card-reverse {
+        flex-direction: row-reverse;
+    }
+    .download-info{
+        display: flex;
+    }
+    .download-icon{
+        flex-basis: 25%;
+    }
+    .download-gener-cast{
+        flex-basis: 50%;
+    }
+    .download-ratings{
+        flex-basis: 25%;
+    }
+    .movies-gallary{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .gallary-post{
+        flex-basis: 49%;
+    }
+    .gallary-post a img{
+        height: 300px;
+    }
 }
 
 /* =====================< Media Queries for Desktop >==================== */
@@ -138,7 +297,6 @@ a:link, a:visited{
         display: flex;
     }
     .side-bar {
-        background-color: aqua;
         /* flex-grow: 0; */
         /* flex-shrink: 0; */
         /* flex-basis: 400px; */
@@ -155,5 +313,32 @@ a:link, a:visited{
     }
     .post-full {
         flex-basis: 100%;
+    }
+    .gallary-post:nth-child(n + 1){
+        flex-basis: 39%;
+    }
+    .gallary-post:nth-child(n + 2){
+        flex-basis: 60%;
+    }
+    .gallary-post:nth-child(n + 3){
+        flex-basis: 29%;
+    }
+    .gallary-post:nth-child(n + 4){
+        flex-basis: 70%;
+    }
+    .gallary-post:nth-child(n + 5){
+        flex-basis: 49.5%;
+    }
+    .gallary-post:nth-child(n + 7){
+        flex-basis: 39%;
+    }
+    .gallary-post:nth-child(n + 8){
+        flex-basis: 60%;
+    }
+    .gallary-post:nth-child(n + 9){
+        flex-basis: 32%;
+    }
+    .gallary-post:nth-child(n + 10){
+        flex-basis: 67%;
     }
 }
