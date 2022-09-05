@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outer-wrap{
+    background-color: #ededed;
+}
+a:link, a:visited{
+    text-decoration: none;
+    color: #000;
+}
+.img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* =====================< Header CSS Start >==================== */
+.header{
+    background-color: #000;
+    color: #fff;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.heading-info {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.main-heading{
+    font-size: 50px;
+}
+.slogan-heading{
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-style: italic;
+    color: #f6d200;
+}
+.navbar{
+    background-color: #f6d200;
+    color: #fff;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+.navbar ul li a:link, .navbar ul li a:visited{
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar ul li{
+    flex-grow: 1;
+    /* text-align: center; */
+}
+.navbar ul li a:hover, .navbar ul li a:active, .navbar ul li a:focus {
+    background-color: #000;
+    color: #f6d200;
+}
+/* =====================< Header CSS End >==================== */
+
+
+
+/* =====================< Main-Content-Area CSS Start >==================== */
+.main-content-area{
+    padding: 20px;
+}
+
+.side-bar{
+    background-color: aqua;
+    padding: 20px;
+}
+
+/* ====================< Movie Post Section >==================== */
+
+.movie-post{
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.post-info h3 {
+    padding: 20px;
+    text-align: center;
+    background-color: #f6d200;
+}
+.post-info p {
+    padding: 20px;
+}
+
+
+
+
+
+/* =====================< Main-Content-Area CSS End >==================== */
+
+.footer{
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+/* =====================< Media Queries Start >==================== */
+
+/* =====================< Media Queries for Tab >==================== */
+
+
+@media All and (min-width : 768px){
+    .navbar ul{
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .posts{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .movie-post{
+        flex-basis: 49%;
+    }
+}
+
+/* =====================< Media Queries for Desktop >==================== */
+
+
+@media All and (min-width : 1200px) {
+    .content-area{
+        display: flex;
+    }
+    .side-bar {
+        background-color: aqua;
+        /* flex-grow: 0; */
+        /* flex-shrink: 0; */
+        /* flex-basis: 400px; */
+        flex: 0 0 400px;
+    }
+    .main-heading{
+        font-size: 80px;
+    }
+    .post-half {
+        flex-basis: 49%;
+    }
+    .post-one-third {
+        flex-basis: 32%;
+    }
+    .post-full {
+        flex-basis: 100%;
+    }
+}
